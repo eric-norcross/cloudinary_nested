@@ -1,0 +1,11 @@
+.field.editable.file-field
+  .field-content
+    .title
+      = f.label :asset do
+        Upload
+
+    .value
+      = f.cl_image_upload :asset
+        
+      .hidden
+        = f.hidden_field :imageable_type
