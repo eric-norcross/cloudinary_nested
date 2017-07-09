@@ -1,3 +1,4 @@
+// Add Nested Sku without a nested Image
 $(document).on("click", "#add-nested-skus", function(event) {
   event.stopImmediatePropagation();
 
@@ -26,10 +27,7 @@ $(document).on("click", "#add-nested-skus", function(event) {
     console.log("jqXHR.getResponseHeader('response'): ", jqXHR.getResponseHeader('response')); //This is a custom message e.g.: Success!
     console.log("--------------------------------------------------");
     console.log("");
-
-    console.log("this: ", this);
-    console.log("$(this): ", $(this));
-
+    
     insertNode.append(data);
   });
    
@@ -47,6 +45,7 @@ $(document).on("click", "#add-nested-skus", function(event) {
   
 });
 
+// Add Nested Sku with a nested Image
 $(document).on("click", "#add-nested-skus-with-image", function(event) {
   event.stopImmediatePropagation();
 
@@ -101,7 +100,6 @@ $(document).on("click", "#add-nested-skus-with-image", function(event) {
 // Cloudinary
 // ==================================================================
   var cloudinaryUploaderInit = function() {
-    // console.log("cloudinaryUploaderInit");
     if ($.fn.cloudinary_fileupload !== undefined) {
       $("input.cloudinary-fileupload[type=file]").each(function() {
         $(this).cloudinary_fileupload();
